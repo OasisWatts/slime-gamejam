@@ -1,0 +1,17 @@
+{
+  "$schema": "./settings.schema.json",
+  "application": {
+    "language-support": {
+      "ko-KR": "한국어"
+    }
+  },
+  "cookie": {
+    "age": 604800000,
+    "secret": "jjwak"
+  },
+  "log": {
+    "directory": "logs",
+    "interval": 86400000
+  },
+  "port": 4416
+}

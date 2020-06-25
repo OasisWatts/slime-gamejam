@@ -1,0 +1,87 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "$schema": {
+      "type": "string",
+      "enum": [
+        "./settings.schema.json"
+      ]
+    },
+    "application": {
+      "type": "object",
+      "properties": {
+        "language-support": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "language-support"
+      ],
+      "additionalProperties": false
+    },
+    "cookie": {
+      "type": "object",
+      "properties": {
+        "age": {
+          "type": "number"
+        },
+        "secret": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "age",
+        "secret"
+      ],
+      "additionalProperties": false
+    },
+    "https": {
+      "type": "object",
+      "properties": {
+        "key": {
+          "type": "string"
+        },
+        "cert": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "key",
+        "cert"
+      ],
+      "additionalProperties": false
+    },
+    "log": {
+      "type": "object",
+      "properties": {
+        "directory": {
+          "type": "string"
+        },
+        "interval": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "directory",
+        "interval"
+      ],
+      "additionalProperties": false
+    },
+    "port": {
+      "type": "number"
+    }
+  },
+  "required": [
+    "$schema",
+    "application",
+    "cookie",
+    "log",
+    "port"
+  ],
+  "additionalProperties": false,
+  "definitions": {}
+}
